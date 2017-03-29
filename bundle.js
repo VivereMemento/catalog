@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e13310032c1318de634f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9f1239a64d5192ce332e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -570,7 +570,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "http://localhost:3000/";
 
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -8497,6 +8497,8 @@
 	var _routes = __webpack_require__(365);
 
 	var _routes2 = _interopRequireDefault(_routes);
+
+	__webpack_require__(743);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38032,11 +38034,11 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _index = __webpack_require__(742);
+	var _index = __webpack_require__(734);
 
-	var _index2 = __webpack_require__(745);
+	var _index2 = __webpack_require__(737);
 
-	var _index3 = __webpack_require__(750);
+	var _index3 = __webpack_require__(742);
 
 	var _index4 = _interopRequireDefault(_index3);
 
@@ -38045,7 +38047,7 @@
 	exports.default = _react2.default.createElement(
 	    _reactRouter.Route,
 	    { component: _app2.default, path: _app2.default.path },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _index.HomePage }),
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _index2.Catalog }),
 	    _index.HomeRoutes,
 	    _index2.CatalogRoutes,
 	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _index4.default })
@@ -38075,8 +38077,6 @@
 	var _index = __webpack_require__(367);
 
 	var _index2 = __webpack_require__(376);
-
-	__webpack_require__(734);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54127,20 +54127,550 @@
 /* 734 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.HomeRoutes = exports.HomePage = undefined;
+
+	var _home = __webpack_require__(735);
+
+	var _home2 = _interopRequireDefault(_home);
+
+	var _routes = __webpack_require__(736);
+
+	var _routes2 = _interopRequireDefault(_routes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.HomePage = _home2.default;
+	exports.HomeRoutes = _routes2.default;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 735 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var HomePage = function (_React$Component) {
+	    _inherits(HomePage, _React$Component);
+
+	    function HomePage() {
+	        _classCallCheck(this, HomePage);
+
+	        return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
+	    }
+
+	    _createClass(HomePage, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'home' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'heading-wrap' },
+	                        _react2.default.createElement(
+	                            'h1',
+	                            { className: 'heading' },
+	                            'Hello this is Home page'
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return HomePage;
+	}(_react2.default.Component);
+
+	HomePage.path = '/home';
+	exports.default = HomePage;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 736 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(265);
+
+	var _home = __webpack_require__(735);
+
+	var _home2 = _interopRequireDefault(_home);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createElement(
+	    _reactRouter.Route,
+	    null,
+	    _react2.default.createElement(_reactRouter.Route, { component: _home2.default, path: _home2.default.path })
+	);
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 737 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.CatalogRoutes = exports.Catalog = undefined;
+
+	var _catalog = __webpack_require__(738);
+
+	var _catalog2 = _interopRequireDefault(_catalog);
+
+	var _routes = __webpack_require__(741);
+
+	var _routes2 = _interopRequireDefault(_routes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.Catalog = _catalog2.default;
+	exports.CatalogRoutes = _routes2.default;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 738 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _products = __webpack_require__(739);
+
+	var _products2 = _interopRequireDefault(_products);
+
+	var _subscribe = __webpack_require__(740);
+
+	var _subscribe2 = _interopRequireDefault(_subscribe);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Catalog = function (_React$Component) {
+	    _inherits(Catalog, _React$Component);
+
+	    function Catalog() {
+	        _classCallCheck(this, Catalog);
+
+	        return _possibleConstructorReturn(this, (Catalog.__proto__ || Object.getPrototypeOf(Catalog)).apply(this, arguments));
+	    }
+
+	    _createClass(Catalog, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'catalog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(_products2.default, null),
+	                    _react2.default.createElement(_subscribe2.default, null)
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Catalog;
+	}(_react2.default.Component);
+
+	Catalog.path = '/catalog';
+	exports.default = Catalog;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "catalog.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 739 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _index = __webpack_require__(367);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PRODUCTITEMS = [{ img: 'img/products_1.jpg', species: 'shorts', disc: 'Printed swimsuit', price: '$23', sale: '', new: '' }, { img: 'img/products_2.jpg', species: 'shorts', disc: 'Jogging bermuda shorts', price: '$12', sale: '$36', new: 'new' }, { img: 'img/products_3.jpg', species: 'accessoires', disc: 'Basic beach flip flops', price: '$9', sale: '', new: '' }, { img: 'img/products_4.jpg', species: 'accessoires', disc: 'Black sunglasses', price: '$29', sale: '', new: '' }, { img: 'img/products_5.jpg', species: 'shirts', disc: 'Long sleeved twill shirt', price: '$20', sale: '', new: '' }, { img: 'img/products_6.jpg', species: 'shorts', disc: 'Basic swimsuit', price: '$36', sale: '', new: '' }, { img: 'img/products_7.jpg', species: 'shorts', disc: 'Bleached shorts', price: '$12', sale: '', new: '' }, { img: 'img/products_8.jpg', species: 't-shirts', disc: 'T-shirt with lower panel', price: '$12', sale: '$32', new: '' }];
+
+	var Products = function (_React$Component) {
+	    _inherits(Products, _React$Component);
+
+	    function Products(props) {
+	        _classCallCheck(this, Products);
+
+	        var _this = _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).call(this, props));
+
+	        _this.state = {
+	            stateArray: PRODUCTITEMS
+	        };
+	        return _this;
+	    }
+
+	    _createClass(Products, [{
+	        key: 'renderItems',
+	        value: function renderItems(item, index) {
+	            var salePrice = item.sale !== '' ? 'sale-price' : '';
+	            var newProduct = item.new !== '' ? 'catalog__item_new' : '';
+	            return _react2.default.createElement(
+	                'li',
+	                { className: ['catalog__item', newProduct].join(' '), key: index },
+	                _react2.default.createElement(
+	                    'figure',
+	                    { className: 'catalog__img-wrap' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'catalog__link', href: '#' },
+	                        _react2.default.createElement('img', { className: 'catalog__img', src: item.img })
+	                    ),
+	                    _react2.default.createElement(
+	                        'figcaption',
+	                        { className: 'catalog__discription' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'catalog__discription-text' },
+	                            item.disc
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: ['catalog__discription-price', salePrice].join(' '), 'data-actual-price': item.sale },
+	                            item.price
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'section',
+	                { className: 'catalog__products' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'heading-wrap' },
+	                    _react2.default.createElement(
+	                        'h1',
+	                        { className: 'heading' },
+	                        'Catalog'
+	                    )
+	                ),
+	                _react2.default.createElement(_index.Filter, null),
+	                _react2.default.createElement(
+	                    'ul',
+	                    { className: 'catalog__list' },
+	                    this.state.stateArray.map(this.renderItems.bind(this))
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'catalog__load' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'catalog__load-link', href: '#' },
+	                        'Load more...'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Products;
+	}(_react2.default.Component);
+
+	exports.default = Products;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "_products.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 740 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _index = __webpack_require__(367);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Subscribe = function (_React$Component) {
+	    _inherits(Subscribe, _React$Component);
+
+	    function Subscribe() {
+	        _classCallCheck(this, Subscribe);
+
+	        return _possibleConstructorReturn(this, (Subscribe.__proto__ || Object.getPrototypeOf(Subscribe)).apply(this, arguments));
+	    }
+
+	    _createClass(Subscribe, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'subscribe' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title-wrap' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'title' },
+	                            'subscribe'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'subtitle' },
+	                            'Stay updated on new'
+	                        )
+	                    ),
+	                    _react2.default.createElement(_index.Form, null)
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Subscribe;
+	}(_react2.default.Component);
+
+	exports.default = Subscribe;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "_subscribe.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 741 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(265);
+
+	var _catalog = __webpack_require__(738);
+
+	var _catalog2 = _interopRequireDefault(_catalog);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createElement(
+	    _reactRouter.Route,
+	    null,
+	    _react2.default.createElement(_reactRouter.Route, { component: _catalog2.default, path: _catalog2.default.path })
+	);
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 742 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(265);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ErrorPage = function (_React$Component) {
+	    _inherits(ErrorPage, _React$Component);
+
+	    function ErrorPage() {
+	        _classCallCheck(this, ErrorPage);
+
+	        return _possibleConstructorReturn(this, (ErrorPage.__proto__ || Object.getPrototypeOf(ErrorPage)).apply(this, arguments));
+	    }
+
+	    _createClass(ErrorPage, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'error' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'heading-wrap' },
+	                        _react2.default.createElement(
+	                            'h1',
+	                            { className: 'heading' },
+	                            'The page does\'t exist'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            '\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 ',
+	                            _react2.default.createElement(
+	                                _reactRouter.Link,
+	                                { to: '/' },
+	                                '\u0433\u043B\u0430\u0432\u043D\u0443\u044E'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ErrorPage;
+	}(_react2.default.Component);
+
+	exports.default = ErrorPage;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 743 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(735);
+	var content = __webpack_require__(744);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(741)(content, {});
+	var update = __webpack_require__(750)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept(735, function() {
-				var newContent = __webpack_require__(735);
+			module.hot.accept(744, function() {
+				var newContent = __webpack_require__(744);
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -54150,21 +54680,21 @@
 	}
 
 /***/ },
-/* 735 */
+/* 744 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(736)();
+	exports = module.exports = __webpack_require__(745)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "/* --------- variables --------- */\n/* --------- classes --------- */\n.heading-wrap {\n  text-align: center; }\n\n.heading {\n  color: #333333;\n  font-family: \"Playfair Display\", serif;\n  font-size: 58px;\n  font-weight: 400;\n  line-height: 58px; }\n\n/* --------- adjustment --------- */\n/* --------- mixins --------- */\n/* --------- centered --------- */\n/* --------- compass sprites --------- */\n/* --------- responsive mixins --------- */\n/* --------- adjustment --------- */\nhtml {\n  width: 100%;\n  font-size: 100.01%;\n  height: 100%; }\n  @media screen and (max-width: 1200px) {\n    html {\n      font-size: 12px; } }\n\nbody {\n  font: 12px/12px \"Lato\", sans-serif;\n  color: #999999;\n  font-smoothing: antialiased;\n  width: 100%;\n  height: 100% !important;\n  background: #fff; }\n\n.container {\n  width: 1140px;\n  margin: 0 auto;\n  position: relative; }\n  .container:before, .container:after {\n    content: \"\";\n    display: table; }\n  .container:after {\n    clear: both; }\n  @media screen and (min-width: 1800px) {\n    .container {\n      width: 1140px; } }\n  @media screen and (max-width: 1800px) {\n    .container {\n      width: 1140px; } }\n  @media screen and (max-width: 992px) {\n    .container {\n      width: 100%;\n      padding: 0 15px; } }\n\n.flex-container {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: justify;\n      justify-content: space-between;\n  -ms-flex-align: center;\n      align-items: center; }\n  .flex-container::before, .flex-container::after {\n    display: none; }\n\n#app {\n  height: 100%; }\n\n.wrapper {\n  position: relative;\n  min-height: 100%;\n  height: auto !important;\n  height: 100%;\n  overflow: hidden;\n  min-width: 100%; }\n  .wrapper:after {\n    content: \"\";\n    display: block;\n    position: relative;\n    height: 100px; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nul {\n  padding: 0;\n  margin: 0; }\n  ul li {\n    padding: 0;\n    margin: 0;\n    list-style: none outside none; }\n\np {\n  padding: 0;\n  margin: 0; }\n\nimg {\n  max-width: 100%;\n  min-height: 100%; }\n\nfooter {\n  position: relative;\n  min-width: 100%;\n  height: 100px;\n  margin-top: -100px; }\n\nfigure {\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\n.header__top {\n  border-bottom: 1px solid #ededed; }\n  .header__top:before, .header__top:after {\n    content: \"\";\n    display: table; }\n  .header__top:after {\n    clear: both; }\n  .header__top-left {\n    float: left; }\n  .header__top-right {\n    float: right;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row; }\n\n.header__bottom {\n  padding: 25px 0;\n  border-bottom: 1px solid #ededed;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n\n.user {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n  .user__bag {\n    width: 50px;\n    height: 50px;\n    text-align: center;\n    border: 2px solid #187dd6;\n    border-radius: 50%;\n    position: relative; }\n    .user__bag:hover {\n      background: #187dd6; }\n    .user__bag:hover .user__bag-count::after {\n      color: #fff; }\n    .user__bag::after {\n      display: block;\n      content: 'your bag';\n      font: 700 12px/12px \"Lato\", sans-serif;\n      text-transform: uppercase;\n      position: absolute;\n      top: 18px;\n      left: -80px;\n      cursor: pointer; }\n    .user__bag-count {\n      display: block;\n      width: 100%;\n      height: 100%;\n      text-decoration: none;\n      position: relative; }\n      .user__bag-count::after {\n        display: block;\n        content: attr(data-count);\n        width: 10px;\n        height: 10px;\n        margin: auto;\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0; }\n  .user__search {\n    width: 50px;\n    height: 50px;\n    margin-right: -15px; }\n    .user__search-link {\n      display: block;\n      width: 100%;\n      height: 100%;\n      background: url(" + __webpack_require__(737) + ") no-repeat center center; }\n\n.logo__img-wrap {\n  max-width: 100px; }\n\n.logo__link {\n  display: block;\n  width: 100%;\n  height: 100%; }\n\n.menu__list {\n  padding: 15px 0;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n\n.menu__item {\n  margin-left: 35px; }\n  .menu__item:first-child {\n    margin-left: 0; }\n\n.menu__link {\n  font-size: 11px;\n  font-weight: 700;\n  color: inherit;\n  text-transform: uppercase;\n  text-decoration: none; }\n  .menu__link:hover {\n    color: gray; }\n\n.nav__list {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.nav__item {\n  margin-left: 55px; }\n  .nav__item:first-child {\n    margin-left: 0; }\n\n.nav__link {\n  display: block;\n  width: 100%;\n  height: 100%;\n  font-weight: 700;\n  color: inherit;\n  text-transform: uppercase;\n  text-decoration: none;\n  position: relative; }\n  .nav__link_color {\n    color: #fc411d; }\n  .nav__link:hover {\n    color: #333333; }\n  .nav__link::after {\n    display: block;\n    content: '';\n    width: 0;\n    height: 2px;\n    background: #187dd6;\n    position: absolute;\n    bottom: -5px;\n    left: 0;\n    transition: width .3s; }\n  .nav__link:hover.nav__link::after {\n    width: 100%; }\n  .nav__link.active {\n    color: #333333; }\n    .nav__link.active::after {\n      width: 100%; }\n\n.tabs {\n  margin-bottom: 50px; }\n  .tabs__list {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row;\n    -ms-flex-pack: center;\n        justify-content: center; }\n  .tabs__item {\n    margin-left: 55px; }\n    .tabs__item:first-child {\n      margin-left: 0; }\n    .tabs__item.active .tabs__link {\n      color: #187dd6; }\n  .tabs__link {\n    display: block;\n    width: 100%;\n    height: 100%;\n    font-weight: 700;\n    color: inherit;\n    text-transform: uppercase;\n    text-decoration: none;\n    position: relative; }\n    .tabs__link_color {\n      color: #fc411d; }\n    .tabs__link:hover {\n      color: #187dd6; }\n    .tabs__link::after {\n      display: block;\n      content: '';\n      width: 0;\n      height: 2px;\n      background: #187dd6;\n      position: absolute;\n      bottom: -5px;\n      left: 0;\n      transition: width .3s; }\n    .tabs__link:hover.nav__link::after {\n      width: 100%; }\n    .tabs__link.active {\n      color: #333333; }\n      .tabs__link.active::after {\n        width: 100%; }\n\n.currency__current-wrap {\n  margin-right: 12px;\n  padding: 15px 20px; }\n\n.currency__current, .currency__link {\n  font-size: 11px;\n  font-weight: 700;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative; }\n  .currency__current:hover, .currency__link:hover {\n    color: gray; }\n  .currency__current::after, .currency__link::after {\n    display: inline-block;\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: url(" + __webpack_require__(738) + ") no-repeat center center;\n    position: absolute;\n    top: 2px;\n    right: -15px;\n    transition: .3s; }\n  .currency__current:hover.currency__current::after, .currency__link:hover::after {\n    transform: rotate(180deg); }\n\n.currency__link:hover {\n  color: gray; }\n\n.currency__list {\n  display: none; }\n\n.languages__current-wrap {\n  padding: 15px 20px 15px 20px;\n  border-left: 1px solid #ededed; }\n\n.languages__current, .languages__link {\n  font-size: 11px;\n  font-weight: 700;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative; }\n  .languages__current:hover, .languages__link:hover {\n    color: gray; }\n  .languages__current::after, .languages__link::after {\n    display: inline-block;\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: url(" + __webpack_require__(738) + ") no-repeat center center;\n    position: absolute;\n    top: 2px;\n    right: -15px;\n    transition: .3s; }\n  .languages__current:hover.languages__current::after, .languages__link:hover::after {\n    transform: rotate(180deg); }\n\n.languages__link:hover {\n  color: gray; }\n\n.languages__list {\n  display: none; }\n\n.form-wrap {\n  width: 300px;\n  display: inline-block; }\n\n.form__input {\n  width: 100%;\n  padding: 15px 20px;\n  font: 700 12px/12px \"Lato\", sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  background: transparent;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  border-radius: 50px;\n  outline: none; }\n  .form__input::-webkit-input-placeholder {\n    color: white; }\n  .form__input:-moz-placeholder {\n    color: white; }\n  .form__input::-moz-placeholder {\n    color: white; }\n  .form__input:-ms-input-placeholder {\n    color: white; }\n\n.footer {\n  padding-top: 30px; }\n  .footer__nav-link_mods {\n    color: #333333; }\n    .footer__nav-link_mods:hover {\n      color: gray; }\n    .footer__nav-link_mods::after {\n      display: none; }\n\n.catalog {\n  /*********** DISCRIPTIONS ************/\n  /*********** LOAD LINK ************/ }\n  .catalog__products {\n    margin-bottom: 60px; }\n  .catalog__list {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row;\n    -ms-flex-pack: justify;\n        justify-content: space-between;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap; }\n  .catalog__item {\n    margin-bottom: 36px;\n    position: relative; }\n    .catalog__item:hover .catalog__img {\n      transform: scale(1.03);\n      box-shadow: 6px 8px 8px 0px rgba(0, 0, 0, 0.25); }\n    .catalog__item_new:after {\n      display: block;\n      content: \"\";\n      width: 52px;\n      height: 27px;\n      background: url(" + __webpack_require__(739) + ") no-repeat top left;\n      position: absolute;\n      top: 23px;\n      left: 30px; }\n  .catalog__link {\n    display: block;\n    width: 100%;\n    height: 100%;\n    text-decoration: none; }\n  .catalog__img {\n    transition: all .3s; }\n  .catalog__discription {\n    padding-top: 20px;\n    text-align: center; }\n    .catalog__discription-text {\n      margin-bottom: 10px;\n      font: 400 16px/16px \"Playfair Display\", serif;\n      color: #333;\n      display: block; }\n    .catalog__discription-price {\n      color: rgba(51, 51, 51, 0.5);\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 20px; }\n      .catalog__discription-price:before {\n        display: inline-block;\n        content: attr(data-actual-price);\n        margin-right: 10px;\n        color: rgba(51, 51, 51, 0.5);\n        text-decoration: line-through; }\n    .catalog__discription .sale-price {\n      color: #fc411d; }\n  .catalog__load {\n    text-align: center; }\n    .catalog__load-link {\n      color: rgba(51, 51, 51, 0.5);\n      font-size: 13px;\n      font-weight: 700;\n      text-transform: uppercase;\n      text-decoration: none;\n      position: relative; }\n      .catalog__load-link:hover.catalog__load-link:after {\n        width: 100%; }\n      .catalog__load-link:after {\n        display: block;\n        content: \"\";\n        width: 0;\n        height: 1px;\n        background: rgba(51, 51, 51, 0.5);\n        transition: all .3s;\n        position: absolute;\n        bottom: -2px;\n        left: 0; }\n\n.subscribe {\n  padding: 70px 0;\n  text-align: center;\n  background: url(" + __webpack_require__(740) + ") no-repeat top left;\n  background-size: cover; }\n\n.title-wrap {\n  margin-bottom: 25px; }\n\n.title {\n  margin-bottom: 25px;\n  font: 700 12px/12px \"Lato\", sans-serif;\n  color: #333;\n  text-transform: uppercase;\n  display: block;\n  opacity: 0.6; }\n\n.subtitle {\n  font: 400 38px/38px \"Playfair Display\", serif;\n  color: white; }\n", "", {"version":3,"sources":["/./src/src/C:/Users/Админ/Desktop/Eleken/src/main.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/_misc/_mixins.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/_misc/_adjustment.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/header.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/logo.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/menu.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/nav.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/filter.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/currency.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/languages.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/form.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/footer.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/section/catalog.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/section/subscribe.scss"],"names":[],"mappings":"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","file":"main.scss","sourcesContent":["\r\n/* --------- variables --------- */\r\n$responsive: true;\r\n\r\n$grey: #999999;\r\n$black: #333333;\r\n$red: #fc411d;\r\n$blue: #187dd6;\r\n\r\n$ffL: 'Lato', sans-serif;\r\n$ffP: 'Playfair Display', serif;\r\n\r\n/* --------- classes --------- */\r\n.heading-wrap {\r\n    text-align: center;\r\n}\r\n.heading {\r\n    color: $black;\r\n    font-family: $ffP;\r\n    font-size: 58px;\r\n    font-weight: 400;\r\n    line-height: 58px;\r\n}\r\n\r\n/* --------- adjustment --------- */\r\n\r\n// @import \"styles/_misc/font-awesome\";\r\n// @import \"styles/_misc/fonts\";\r\n@import \"styles/_misc/mixins\";\r\n@import \"styles/_misc/adjustment\";\r\n\r\n// /* --------- common --------- */\r\n//\r\n@import \"styles/common/header\";\r\n@import \"styles/common/logo\";\r\n@import \"styles/common/menu\";\r\n@import \"styles/common/nav\";\r\n@import \"styles/common/filter\";\r\n@import \"styles/common/currency\";\r\n@import \"styles/common/languages\";\r\n@import \"styles/common/form\";\r\n@import \"styles/common/footer\";\r\n//\r\n//\r\n// /* --------- sections --------- */\r\n//\r\n@import \"styles/section/catalog\";\r\n@import \"styles/section/subscribe\";\r\n//\r\n// // @import \"sections/**/*\";\r\n","/* --------- mixins --------- */\r\n\r\n@mixin inlineblock ($valine: top) {\r\n\tdisplay: inline-block;\r\n\tvertical-align: $valine;\r\n}\r\n\r\n@mixin clearfix {\r\n\t&:before,\r\n\t&:after {\r\n\t\tcontent: \"\";\r\n\t\tdisplay: table;\r\n\t}\r\n\r\n\t&:after {\r\n\t\tclear: both;\r\n\t}\r\n}\r\n\r\n@mixin border-radius($radius: 5px) {\r\n\t-webkit-border-radius: $radius;\r\n\t-moz-border-radius: $radius;\r\n\tborder-radius: $radius;\r\n\r\n\t-moz-background-clip: padding;\r\n\t-webkit-background-clip: padding-box;\r\n\tbackground-clip: padding-box;\r\n}\r\n\r\n@mixin box-shadow($string...) {\r\n\t-webkit-box-shadow: $string;\r\n\t-moz-box-shadow: $string;\r\n\tbox-shadow: $string;\r\n}\r\n\r\n@mixin transition($transition...) {\r\n\t-webkit-transition: $transition;\r\n\t-moz-transition: $transition;\r\n\t-ms-transition: $transition;\r\n\t-o-transition: $transition;\r\n\ttransition: $transition;\r\n}\r\n\r\n@mixin placecolor($color: #000000) {\r\n\t&::-webkit-input-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&:-moz-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&::-moz-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&:-ms-input-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n}\r\n\r\n@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {\r\n\tbackground-color: $top-color;\r\n\tbackground-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */\r\n\tbackground-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */\r\n\tbackground-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */\r\n\tbackground-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */\r\n\tbackground-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */\r\n\tfilter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);\r\n}\r\n\r\n@mixin transform($transforms...) {\r\n\t-moz-transform: $transforms;\r\n\t-o-transform: $transforms;\r\n\t-ms-transform: $transforms;\r\n\t-webkit-transform: $transforms;\r\n\ttransform: $transforms;\r\n}\r\n\r\n/* --------- centered --------- */\r\n\r\n@mixin absolute-center {\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n\tmargin: auto;\r\n\tposition: absolute;\r\n}\r\n\r\n@mixin cover {\r\n\tbackground-size: cover;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n}\r\n\r\n@mixin centered {\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t@include transform(translate(-50%, -50%));\r\n}\r\n\r\n/* --------- compass sprites --------- */\r\n\r\n@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {\r\n\t$sprite-image: sprite-file($map, $sprite);\r\n\t$sprite-map: sprite-url($map);\r\n\t$sprite-position: sprite-position($map, $sprite);\r\n\t$sprite-layout: smart;\r\n\r\n\tbackground: $sprite-map $sprite-position $repeat;\r\n\r\n\t@if ($height == true) {\r\n\t\t$sprite-height: image-height($sprite-image);\r\n\t\theight: $sprite-height;\r\n\t}\r\n\r\n\t@if ($width == true) {\r\n\t\t$sprite-width: image-width($sprite-image);\r\n\t\twidth: $sprite-width;\r\n\t}\r\n}\r\n\r\n/* --------- responsive mixins --------- */\r\n\r\n@mixin television {\r\n\t@media screen and (min-width: 1800px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin desktopLarge {\r\n\t@media screen and (max-width: 1800px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin desktop {\r\n\t@media screen and (max-width: 1200px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin laptop {\r\n\t@media screen and (max-width: 992px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin tablets {\r\n\t@media screen and (max-width: 768px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin phones {\r\n\t@media screen and (max-width: 480px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n// @function rem($target, $context: $base-font-size) {\r\n// \t@if $target == 0 { @return 0 }\r\n// \t@return $target / $context + 0rem;\r\n// }\r\n","/* --------- adjustment --------- */\r\n\r\n$container-width: 1140px;\r\n$footer-height: 100px;\r\n$body-font: $ffL;\r\n\r\nhtml {\r\n\twidth:100%;\r\n\tfont-size: 100.01%;\r\n\theight: 100%;\r\n\r\n\t@if $responsive == true {\r\n\t\t@include desktop {\r\n\t\t\tfont-size: 12px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\nbody {\r\n\tfont: 12px/12px $body-font;\r\n\tcolor: $grey;\r\n\tfont-smoothing: antialiased;\r\n\twidth:100%;\r\n\theight:100% !important;\r\n\tbackground: #fff;\r\n}\r\n\r\n.container {\r\n\twidth: $container-width;\r\n\tmargin: 0 auto;\r\n\tposition: relative;\r\n\t// width: if($responsive == true, 100%, $container-width);\r\n\t@include clearfix;\r\n\r\n\t@if $responsive == true {\r\n\r\n\t\t@include television {\r\n\t\t\twidth: 1140px;\r\n\t\t}\r\n\r\n\t\t@include desktopLarge {\r\n\t\t\twidth: 1140px;\r\n\t\t}\r\n\r\n\t\t@include laptop {\r\n\t\t\twidth: 100%;\r\n\t\t\tpadding: 0 15px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n.flex-container {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n\r\n\t&::before,\r\n\t&::after {\r\n\t\tdisplay: none;\r\n\t}\r\n}\r\n\r\n#app {\r\n\theight: 100%;\r\n}\r\n\r\n.wrapper {\r\n    position: relative;\r\n    min-height: 100%;\r\n    height: auto !important;\r\n    height: 100%;\r\n    overflow: hidden;\r\n\t\tmin-width: if($responsive == true, 100%, $container-width + 30px);\r\n\r\n\t&:after {\r\n\t\tcontent: \"\";\r\n\t\tdisplay: block;\r\n\t\tposition: relative;\r\n\t\theight: $footer-height;\r\n\t}\r\n}\r\n\r\ntable {\r\n\tborder-collapse: collapse;\r\n\tborder-spacing: 0;\r\n}\r\n\r\nul {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\r\n\tli {\r\n\t\tpadding: 0;\r\n\t\tmargin: 0;\r\n\t\tlist-style: none outside none;\r\n\t}\r\n}\r\n\r\np {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n}\r\n\r\nimg {\r\n\tmax-width: 100%;\r\n\tmin-height: 100%;\r\n}\r\n\r\nfooter {\r\n\tposition: relative;\r\n\tmin-width: if($responsive == true, 100%, $container-width + 30);\r\n\theight: $footer-height;\r\n\tmargin-top: -$footer-height;\r\n\t//position: absolute;\r\n\t//bottom: 0;\r\n\t//left: 0;\r\n\t//right: 0;\r\n}\r\n\r\nfigure {\r\n\tmargin: 0;\r\n}\r\n\r\n* {\r\n\tbox-sizing: border-box;\r\n}\r\n",".header {\r\n\r\n    &__top {\r\n        @include clearfix;\r\n        border-bottom: 1px solid #ededed;\r\n\r\n        &-left {\r\n            float: left;\r\n        }\r\n\r\n        &-right {\r\n            float: right;\r\n            display: flex;\r\n            flex-direction: row;\r\n        }\r\n    }\r\n\r\n    &__bottom {\r\n        padding: 25px 0;\r\n        border-bottom: 1px solid #ededed;\r\n        display: flex;\r\n        flex-direction: row;\r\n    }\r\n}\r\n\r\n.user {\r\n    display: flex;\r\n    flex-direction: row;\r\n\r\n    &__bag {\r\n        width: 50px;\r\n        height: 50px;\r\n        text-align: center;\r\n        border: 2px solid $blue;\r\n        border-radius: 50%;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            background: $blue;\r\n        }\r\n\r\n        &:hover &-count::after {\r\n            color: #fff;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: 'your bag';\r\n            font: 700 12px/12px $ffL;\r\n            text-transform: uppercase;\r\n            position: absolute;\r\n            top: 18px;\r\n            left: -80px;\r\n            cursor: pointer;\r\n        }\r\n\r\n        &-count {\r\n            display: block;\r\n            width: 100%;\r\n            height: 100%;\r\n            text-decoration: none;\r\n            position: relative;\r\n\r\n            &::after {\r\n                display: block;\r\n                content: attr(data-count);\r\n                width: 10px;\r\n                height: 10px;\r\n                margin: auto;\r\n                position: absolute;\r\n                top: 0;\r\n                right: 0;\r\n                bottom: 0;\r\n                left: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    &__search {\r\n        width: 50px;\r\n        height: 50px;\r\n        margin-right: -15px;\r\n\r\n        &-link {\r\n            display: block;\r\n            width: 100%;\r\n            height: 100%;\r\n            background: url(img/search.png) no-repeat center center;\r\n        }\r\n    }\r\n}\r\n",".logo {\r\n\r\n    &__img-wrap {\r\n        max-width: 100px;\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n}\r\n",".menu {\r\n\r\n    &__list {\r\n        padding: 15px 0;\r\n        display: flex;\r\n        flex-direction: row;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 35px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n}\r\n",".nav {\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: center;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 55px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n        position: relative;\r\n\r\n        &_color {\r\n            color: $red;\r\n        }\r\n\r\n        &:hover {\r\n            color: $black;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: '';\r\n            width: 0;\r\n            height: 2px;\r\n            background: $blue;\r\n            position: absolute;\r\n            bottom: -5px;\r\n            left: 0;\r\n            transition: width .3s;\r\n        }\r\n\r\n        &:hover.nav__link::after {\r\n            width: 100%;\r\n        }\r\n\r\n        &.active {\r\n            color: $black;\r\n\r\n            &::after {\r\n                width: 100%;\r\n            }\r\n        }\r\n    }\r\n}\r\n",".tabs {\r\n    margin-bottom: 50px;\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: center;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 55px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n\r\n        &.active .tabs__link {\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n        position: relative;\r\n\r\n        &_color {\r\n            color: $red;\r\n        }\r\n\r\n        &:hover {\r\n            color: $blue;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: '';\r\n            width: 0;\r\n            height: 2px;\r\n            background: $blue;\r\n            position: absolute;\r\n            bottom: -5px;\r\n            left: 0;\r\n            transition: width .3s;\r\n        }\r\n\r\n        &:hover.nav__link::after {\r\n            width: 100%;\r\n        }\r\n\r\n        &.active {\r\n            color: $black;\r\n\r\n            &::after {\r\n                width: 100%;\r\n            }\r\n        }\r\n    }\r\n}\r\n",".currency {\r\n\r\n    &__current-wrap {\r\n        margin-right: 12px;\r\n        padding: 15px 20px;\r\n    }\r\n\r\n    &__current {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        text-transform: uppercase;\r\n        cursor: pointer;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n\r\n        &::after {\r\n            display: inline-block;\r\n            content: '';\r\n            width: 10px;\r\n            height: 10px;\r\n            background: url(./img/arrow.png) no-repeat center center;\r\n            position: absolute;\r\n            top: 2px;\r\n            right: -15px;\r\n            transition: .3s;\r\n        }\r\n\r\n        &:hover.currency__current::after {\r\n            transform: rotate(180deg);\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        @extend .currency__current;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n\r\n    &__list {\r\n        display: none;\r\n    }\r\n}\r\n",".languages {\r\n\r\n    &__current-wrap {\r\n        padding: 15px 20px 15px 20px;\r\n        border-left: 1px solid #ededed;\r\n    }\r\n\r\n    &__current {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        text-transform: uppercase;\r\n        cursor: pointer;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n\r\n        &::after {\r\n            display: inline-block;\r\n            content: '';\r\n            width: 10px;\r\n            height: 10px;\r\n            background: url(./img/arrow.png) no-repeat center center;\r\n            position: absolute;\r\n            top: 2px;\r\n            right: -15px;\r\n            transition: .3s;\r\n        }\r\n\r\n        &:hover.languages__current::after {\r\n            transform: rotate(180deg);\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        @extend .languages__current;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n\r\n    &__list {\r\n        display: none;\r\n    }\r\n}\r\n",".form {\r\n\r\n    &-wrap {\r\n        width: 300px;\r\n        display: inline-block;\r\n    }\r\n\r\n    &__input {\r\n        width: 100%;\r\n        padding: 15px 20px;\r\n        font: 700 12px/12px $ffL;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n        background: transparent;\r\n        border: 2px solid fade-out(#fff, .5);\r\n        border-radius: 50px;\r\n        outline: none;\r\n        @include placecolor(lighten(#fff, 40%));\r\n    }\r\n}\r\n",".footer {\r\n    padding-top: 30px;\r\n\r\n    &__nav-link_mods {\r\n        color: $black;\r\n\r\n        &:hover {\r\n            color: lighten( $black, 30% );\r\n        }\r\n\r\n        &::after {\r\n            display: none;\r\n        }\r\n    }\r\n}\r\n",".catalog {\r\n\r\n    &__products {\r\n        margin-bottom: 60px;\r\n    }\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: space-between;\r\n        flex-wrap: wrap;\r\n    }\r\n\r\n    &__item {\r\n    \tmargin-bottom: 36px;\r\n    \tposition: relative;\r\n\r\n    \t&:hover .catalog__img {\r\n    \t\ttransform: scale(1.03);\r\n    \t\tbox-shadow: 6px 8px 8px 0px rgba(0, 0, 0, 0.25);\r\n    \t}\r\n\r\n    \t&_new:after {\r\n    \t\tdisplay: block;\r\n    \t\tcontent: \"\";\r\n    \t\twidth: 52px;\r\n    \t\theight: 27px;\r\n    \t\tbackground: url(img/new.png) no-repeat top left;\r\n    \t\tposition: absolute;\r\n    \t\ttop: 23px;\r\n    \t\tleft: 30px;\r\n    \t}\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n    \ttext-decoration: none;\r\n    }\r\n\r\n    &__img {\r\n    \ttransition: all .3s;\r\n    }\r\n\r\n/*********** DISCRIPTIONS ************/\r\n\r\n    &__discription {\r\n    \tpadding-top: 20px;\r\n        text-align: center;\r\n\r\n    \t&-text {\r\n    \t\tmargin-bottom: 10px;\r\n    \t\tfont: 400 16px/16px $ffP;\r\n    \t\tcolor: #333;\r\n    \t\tdisplay: block;\r\n    \t}\r\n\r\n    \t&-price {\r\n    \t\tcolor: rgba(51, 51, 51, 0.5);\r\n    \t\tfont-size: 16px;\r\n    \t\tfont-weight: 400;\r\n    \t\tline-height: 20px;\r\n\r\n    \t\t&:before {\r\n    \t\t\tdisplay: inline-block;\r\n    \t\t\tcontent: attr(data-actual-price);\r\n    \t\t\tmargin-right: 10px;\r\n    \t\t\tcolor: rgba(51, 51, 51, 0.5);\r\n    \t\t\ttext-decoration: line-through;\r\n    \t\t}\r\n    \t}\r\n\r\n        .sale-price {\r\n            color: #fc411d;\r\n        }\r\n    }\r\n\r\n/*********** LOAD LINK ************/\r\n\r\n    &__load {\r\n        text-align: center;\r\n\r\n        &-link {\r\n        \tcolor: rgba(51, 51, 51, 0.5);\r\n        \tfont-size: 13px;\r\n        \tfont-weight: 700;\r\n        \ttext-transform: uppercase;\r\n        \ttext-decoration: none;\r\n        \tposition: relative;\r\n\r\n        \t&:hover.catalog__load-link:after {\r\n        \t\twidth: 100%;\r\n        \t}\r\n\r\n        \t&:after {\r\n        \t\tdisplay: block;\r\n        \t\tcontent: \"\";\r\n        \t\twidth: 0;\r\n        \t\theight: 1px;\r\n        \t\tbackground: rgba(51, 51, 51, 0.5);\r\n        \t\ttransition: all .3s;\r\n        \t\tposition: absolute;\r\n        \t\tbottom: -2px;\r\n        \t\tleft: 0;\r\n        \t}\r\n        }\r\n    }\r\n}\r\n",".subscribe {\r\n    padding: 70px 0;\r\n    text-align: center;\r\n    background: url(img/subscribe_bg.jpg) no-repeat top left;\r\n    background-size: cover;\r\n}\r\n\r\n.title-wrap {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.title {\r\n    margin-bottom: 25px;\r\n    font: 700 12px/12px $ffL;\r\n    color: #333;\r\n    text-transform: uppercase;\r\n    display: block;\r\n    opacity: 0.6;\r\n}\r\n\r\n.subtitle {\r\n    font: 400 38px/38px $ffP;\r\n    color: white;\r\n}\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "/* --------- variables --------- */\n/* --------- classes --------- */\n.heading-wrap {\n  text-align: center; }\n\n.heading {\n  color: #333333;\n  font-family: \"Playfair Display\", serif;\n  font-size: 58px;\n  font-weight: 400;\n  line-height: 58px; }\n\n/* --------- adjustment --------- */\n/* --------- mixins --------- */\n/* --------- centered --------- */\n/* --------- compass sprites --------- */\n/* --------- responsive mixins --------- */\n/* --------- adjustment --------- */\nhtml {\n  width: 100%;\n  font-size: 100.01%;\n  height: 100%; }\n  @media screen and (max-width: 1200px) {\n    html {\n      font-size: 12px; } }\n\nbody {\n  font: 12px/12px \"Lato\", sans-serif;\n  color: #999999;\n  font-smoothing: antialiased;\n  width: 100%;\n  height: 100% !important;\n  background: #fff; }\n\n.container {\n  width: 1140px;\n  margin: 0 auto;\n  position: relative; }\n  .container:before, .container:after {\n    content: \"\";\n    display: table; }\n  .container:after {\n    clear: both; }\n  @media screen and (min-width: 1800px) {\n    .container {\n      width: 1140px; } }\n  @media screen and (max-width: 1800px) {\n    .container {\n      width: 1140px; } }\n  @media screen and (max-width: 992px) {\n    .container {\n      width: 100%;\n      padding: 0 15px; } }\n\n.flex-container {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: justify;\n      justify-content: space-between;\n  -ms-flex-align: center;\n      align-items: center; }\n  .flex-container::before, .flex-container::after {\n    display: none; }\n\n#app {\n  height: 100%; }\n\n.wrapper {\n  position: relative;\n  min-height: 100%;\n  height: auto !important;\n  height: 100%;\n  overflow: hidden;\n  min-width: 100%; }\n  .wrapper:after {\n    content: \"\";\n    display: block;\n    position: relative;\n    height: 100px; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nul {\n  padding: 0;\n  margin: 0; }\n  ul li {\n    padding: 0;\n    margin: 0;\n    list-style: none outside none; }\n\np {\n  padding: 0;\n  margin: 0; }\n\nimg {\n  max-width: 100%;\n  min-height: 100%; }\n\nfooter {\n  position: relative;\n  min-width: 100%;\n  height: 100px;\n  margin-top: -100px; }\n\nfigure {\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\n.header__top {\n  border-bottom: 1px solid #ededed; }\n  .header__top:before, .header__top:after {\n    content: \"\";\n    display: table; }\n  .header__top:after {\n    clear: both; }\n  .header__top-left {\n    float: left; }\n  .header__top-right {\n    float: right;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row; }\n\n.header__bottom {\n  padding: 25px 0;\n  border-bottom: 1px solid #ededed;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n\n.user {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n  .user__bag {\n    width: 50px;\n    height: 50px;\n    text-align: center;\n    border: 2px solid #187dd6;\n    border-radius: 50%;\n    position: relative; }\n    .user__bag:hover {\n      background: #187dd6; }\n    .user__bag:hover .user__bag-count::after {\n      color: #fff; }\n    .user__bag::after {\n      display: block;\n      content: 'your bag';\n      font: 700 12px/12px \"Lato\", sans-serif;\n      text-transform: uppercase;\n      position: absolute;\n      top: 18px;\n      left: -80px;\n      cursor: pointer; }\n    .user__bag-count {\n      display: block;\n      width: 100%;\n      height: 100%;\n      text-decoration: none;\n      position: relative; }\n      .user__bag-count::after {\n        display: block;\n        content: attr(data-count);\n        width: 10px;\n        height: 10px;\n        margin: auto;\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0; }\n  .user__search {\n    width: 50px;\n    height: 50px;\n    margin-right: -15px; }\n    .user__search-link {\n      display: block;\n      width: 100%;\n      height: 100%;\n      background: url(" + __webpack_require__(746) + ") no-repeat center center; }\n\n.logo__img-wrap {\n  max-width: 100px; }\n\n.logo__link {\n  display: block;\n  width: 100%;\n  height: 100%; }\n\n.menu__list {\n  padding: 15px 0;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row; }\n\n.menu__item {\n  margin-left: 35px; }\n  .menu__item:first-child {\n    margin-left: 0; }\n\n.menu__link {\n  font-size: 11px;\n  font-weight: 700;\n  color: inherit;\n  text-transform: uppercase;\n  text-decoration: none; }\n  .menu__link:hover {\n    color: gray; }\n\n.nav__list {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.nav__item {\n  margin-left: 55px; }\n  .nav__item:first-child {\n    margin-left: 0; }\n\n.nav__link {\n  display: block;\n  width: 100%;\n  height: 100%;\n  font-weight: 700;\n  color: inherit;\n  text-transform: uppercase;\n  text-decoration: none;\n  position: relative; }\n  .nav__link_color {\n    color: #fc411d; }\n  .nav__link:hover {\n    color: #333333; }\n  .nav__link::after {\n    display: block;\n    content: '';\n    width: 0;\n    height: 2px;\n    background: #187dd6;\n    position: absolute;\n    bottom: -5px;\n    left: 0;\n    transition: width .3s; }\n  .nav__link:hover.nav__link::after {\n    width: 100%; }\n  .nav__link.active {\n    color: #333333; }\n    .nav__link.active::after {\n      width: 100%; }\n\n.tabs {\n  margin-bottom: 50px; }\n  .tabs__list {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row;\n    -ms-flex-pack: center;\n        justify-content: center; }\n  .tabs__item {\n    margin-left: 55px; }\n    .tabs__item:first-child {\n      margin-left: 0; }\n    .tabs__item.active .tabs__link {\n      color: #187dd6; }\n  .tabs__link {\n    display: block;\n    width: 100%;\n    height: 100%;\n    font-weight: 700;\n    color: inherit;\n    text-transform: uppercase;\n    text-decoration: none;\n    position: relative; }\n    .tabs__link_color {\n      color: #fc411d; }\n    .tabs__link:hover {\n      color: #187dd6; }\n    .tabs__link::after {\n      display: block;\n      content: '';\n      width: 0;\n      height: 2px;\n      background: #187dd6;\n      position: absolute;\n      bottom: -5px;\n      left: 0;\n      transition: width .3s; }\n    .tabs__link:hover.nav__link::after {\n      width: 100%; }\n    .tabs__link.active {\n      color: #333333; }\n      .tabs__link.active::after {\n        width: 100%; }\n\n.currency__current-wrap {\n  margin-right: 12px;\n  padding: 15px 20px; }\n\n.currency__current, .currency__link {\n  font-size: 11px;\n  font-weight: 700;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative; }\n  .currency__current:hover, .currency__link:hover {\n    color: gray; }\n  .currency__current::after, .currency__link::after {\n    display: inline-block;\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: url(" + __webpack_require__(747) + ") no-repeat center center;\n    position: absolute;\n    top: 2px;\n    right: -15px;\n    transition: .3s; }\n  .currency__current:hover.currency__current::after, .currency__link:hover::after {\n    transform: rotate(180deg); }\n\n.currency__link:hover {\n  color: gray; }\n\n.currency__list {\n  display: none; }\n\n.languages__current-wrap {\n  padding: 15px 20px 15px 20px;\n  border-left: 1px solid #ededed; }\n\n.languages__current, .languages__link {\n  font-size: 11px;\n  font-weight: 700;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative; }\n  .languages__current:hover, .languages__link:hover {\n    color: gray; }\n  .languages__current::after, .languages__link::after {\n    display: inline-block;\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: url(" + __webpack_require__(747) + ") no-repeat center center;\n    position: absolute;\n    top: 2px;\n    right: -15px;\n    transition: .3s; }\n  .languages__current:hover.languages__current::after, .languages__link:hover::after {\n    transform: rotate(180deg); }\n\n.languages__link:hover {\n  color: gray; }\n\n.languages__list {\n  display: none; }\n\n.form-wrap {\n  width: 300px;\n  display: inline-block; }\n\n.form__input {\n  width: 100%;\n  padding: 15px 20px;\n  font: 700 12px/12px \"Lato\", sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  background: transparent;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  border-radius: 50px;\n  outline: none; }\n  .form__input::-webkit-input-placeholder {\n    color: white; }\n  .form__input:-moz-placeholder {\n    color: white; }\n  .form__input::-moz-placeholder {\n    color: white; }\n  .form__input:-ms-input-placeholder {\n    color: white; }\n\n.footer {\n  padding-top: 30px; }\n  .footer__nav-link_mods {\n    color: #333333; }\n    .footer__nav-link_mods:hover {\n      color: gray; }\n    .footer__nav-link_mods::after {\n      display: none; }\n\n.catalog {\n  /*********** DISCRIPTIONS ************/\n  /*********** LOAD LINK ************/ }\n  .catalog__products {\n    margin-bottom: 60px; }\n  .catalog__list {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row;\n    -ms-flex-pack: justify;\n        justify-content: space-between;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap; }\n  .catalog__item {\n    margin-bottom: 36px;\n    position: relative; }\n    .catalog__item:hover .catalog__img {\n      transform: scale(1.03);\n      box-shadow: 6px 8px 8px 0px rgba(0, 0, 0, 0.25); }\n    .catalog__item_new:after {\n      display: block;\n      content: \"\";\n      width: 52px;\n      height: 27px;\n      background: url(" + __webpack_require__(748) + ") no-repeat top left;\n      position: absolute;\n      top: 23px;\n      left: 30px; }\n  .catalog__link {\n    display: block;\n    width: 100%;\n    height: 100%;\n    text-decoration: none; }\n  .catalog__img {\n    transition: all .3s; }\n  .catalog__discription {\n    padding-top: 20px;\n    text-align: center; }\n    .catalog__discription-text {\n      margin-bottom: 10px;\n      font: 400 16px/16px \"Playfair Display\", serif;\n      color: #333;\n      display: block; }\n    .catalog__discription-price {\n      color: rgba(51, 51, 51, 0.5);\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 20px; }\n      .catalog__discription-price:before {\n        display: inline-block;\n        content: attr(data-actual-price);\n        margin-right: 10px;\n        color: rgba(51, 51, 51, 0.5);\n        text-decoration: line-through; }\n    .catalog__discription .sale-price {\n      color: #fc411d; }\n  .catalog__load {\n    text-align: center; }\n    .catalog__load-link {\n      color: rgba(51, 51, 51, 0.5);\n      font-size: 13px;\n      font-weight: 700;\n      text-transform: uppercase;\n      text-decoration: none;\n      position: relative; }\n      .catalog__load-link:hover.catalog__load-link:after {\n        width: 100%; }\n      .catalog__load-link:after {\n        display: block;\n        content: \"\";\n        width: 0;\n        height: 1px;\n        background: rgba(51, 51, 51, 0.5);\n        transition: all .3s;\n        position: absolute;\n        bottom: -2px;\n        left: 0; }\n\n.subscribe {\n  padding: 70px 0;\n  text-align: center;\n  background: url(" + __webpack_require__(749) + ") no-repeat top left;\n  background-size: cover; }\n\n.title-wrap {\n  margin-bottom: 25px; }\n\n.title {\n  margin-bottom: 25px;\n  font: 700 12px/12px \"Lato\", sans-serif;\n  color: #333;\n  text-transform: uppercase;\n  display: block;\n  opacity: 0.6; }\n\n.subtitle {\n  font: 400 38px/38px \"Playfair Display\", serif;\n  color: white; }\n", "", {"version":3,"sources":["/./src/src/C:/Users/Админ/Desktop/Eleken/src/main.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/_misc/_mixins.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/_misc/_adjustment.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/header.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/logo.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/menu.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/nav.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/filter.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/currency.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/languages.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/form.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/common/footer.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/section/catalog.scss","/./src/src/C:/Users/Админ/Desktop/Eleken/src/styles/section/subscribe.scss"],"names":[],"mappings":"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","file":"main.scss","sourcesContent":["\r\n/* --------- variables --------- */\r\n$responsive: true;\r\n\r\n$grey: #999999;\r\n$black: #333333;\r\n$red: #fc411d;\r\n$blue: #187dd6;\r\n\r\n$ffL: 'Lato', sans-serif;\r\n$ffP: 'Playfair Display', serif;\r\n\r\n/* --------- classes --------- */\r\n.heading-wrap {\r\n    text-align: center;\r\n}\r\n.heading {\r\n    color: $black;\r\n    font-family: $ffP;\r\n    font-size: 58px;\r\n    font-weight: 400;\r\n    line-height: 58px;\r\n}\r\n\r\n/* --------- adjustment --------- */\r\n\r\n// @import \"styles/_misc/font-awesome\";\r\n// @import \"styles/_misc/fonts\";\r\n@import \"styles/_misc/mixins\";\r\n@import \"styles/_misc/adjustment\";\r\n\r\n// /* --------- common --------- */\r\n//\r\n@import \"styles/common/header\";\r\n@import \"styles/common/logo\";\r\n@import \"styles/common/menu\";\r\n@import \"styles/common/nav\";\r\n@import \"styles/common/filter\";\r\n@import \"styles/common/currency\";\r\n@import \"styles/common/languages\";\r\n@import \"styles/common/form\";\r\n@import \"styles/common/footer\";\r\n//\r\n//\r\n// /* --------- sections --------- */\r\n//\r\n@import \"styles/section/catalog\";\r\n@import \"styles/section/subscribe\";\r\n//\r\n// // @import \"sections/**/*\";\r\n","/* --------- mixins --------- */\r\n\r\n@mixin inlineblock ($valine: top) {\r\n\tdisplay: inline-block;\r\n\tvertical-align: $valine;\r\n}\r\n\r\n@mixin clearfix {\r\n\t&:before,\r\n\t&:after {\r\n\t\tcontent: \"\";\r\n\t\tdisplay: table;\r\n\t}\r\n\r\n\t&:after {\r\n\t\tclear: both;\r\n\t}\r\n}\r\n\r\n@mixin border-radius($radius: 5px) {\r\n\t-webkit-border-radius: $radius;\r\n\t-moz-border-radius: $radius;\r\n\tborder-radius: $radius;\r\n\r\n\t-moz-background-clip: padding;\r\n\t-webkit-background-clip: padding-box;\r\n\tbackground-clip: padding-box;\r\n}\r\n\r\n@mixin box-shadow($string...) {\r\n\t-webkit-box-shadow: $string;\r\n\t-moz-box-shadow: $string;\r\n\tbox-shadow: $string;\r\n}\r\n\r\n@mixin transition($transition...) {\r\n\t-webkit-transition: $transition;\r\n\t-moz-transition: $transition;\r\n\t-ms-transition: $transition;\r\n\t-o-transition: $transition;\r\n\ttransition: $transition;\r\n}\r\n\r\n@mixin placecolor($color: #000000) {\r\n\t&::-webkit-input-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&:-moz-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&::-moz-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n\t&:-ms-input-placeholder {\r\n\t\tcolor: $color;\r\n\t}\r\n}\r\n\r\n@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {\r\n\tbackground-color: $top-color;\r\n\tbackground-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */\r\n\tbackground-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */\r\n\tbackground-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */\r\n\tbackground-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */\r\n\tbackground-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */\r\n\tfilter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);\r\n}\r\n\r\n@mixin transform($transforms...) {\r\n\t-moz-transform: $transforms;\r\n\t-o-transform: $transforms;\r\n\t-ms-transform: $transforms;\r\n\t-webkit-transform: $transforms;\r\n\ttransform: $transforms;\r\n}\r\n\r\n/* --------- centered --------- */\r\n\r\n@mixin absolute-center {\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n\tmargin: auto;\r\n\tposition: absolute;\r\n}\r\n\r\n@mixin cover {\r\n\tbackground-size: cover;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n}\r\n\r\n@mixin centered {\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t@include transform(translate(-50%, -50%));\r\n}\r\n\r\n/* --------- compass sprites --------- */\r\n\r\n@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {\r\n\t$sprite-image: sprite-file($map, $sprite);\r\n\t$sprite-map: sprite-url($map);\r\n\t$sprite-position: sprite-position($map, $sprite);\r\n\t$sprite-layout: smart;\r\n\r\n\tbackground: $sprite-map $sprite-position $repeat;\r\n\r\n\t@if ($height == true) {\r\n\t\t$sprite-height: image-height($sprite-image);\r\n\t\theight: $sprite-height;\r\n\t}\r\n\r\n\t@if ($width == true) {\r\n\t\t$sprite-width: image-width($sprite-image);\r\n\t\twidth: $sprite-width;\r\n\t}\r\n}\r\n\r\n/* --------- responsive mixins --------- */\r\n\r\n@mixin television {\r\n\t@media screen and (min-width: 1800px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin desktopLarge {\r\n\t@media screen and (max-width: 1800px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin desktop {\r\n\t@media screen and (max-width: 1200px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin laptop {\r\n\t@media screen and (max-width: 992px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin tablets {\r\n\t@media screen and (max-width: 768px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n@mixin phones {\r\n\t@media screen and (max-width: 480px) {\r\n\t\t@content;\r\n\t}\r\n}\r\n\r\n// @function rem($target, $context: $base-font-size) {\r\n// \t@if $target == 0 { @return 0 }\r\n// \t@return $target / $context + 0rem;\r\n// }\r\n","/* --------- adjustment --------- */\r\n\r\n$container-width: 1140px;\r\n$footer-height: 100px;\r\n$body-font: $ffL;\r\n\r\nhtml {\r\n\twidth:100%;\r\n\tfont-size: 100.01%;\r\n\theight: 100%;\r\n\r\n\t@if $responsive == true {\r\n\t\t@include desktop {\r\n\t\t\tfont-size: 12px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\nbody {\r\n\tfont: 12px/12px $body-font;\r\n\tcolor: $grey;\r\n\tfont-smoothing: antialiased;\r\n\twidth:100%;\r\n\theight:100% !important;\r\n\tbackground: #fff;\r\n}\r\n\r\n.container {\r\n\twidth: $container-width;\r\n\tmargin: 0 auto;\r\n\tposition: relative;\r\n\t// width: if($responsive == true, 100%, $container-width);\r\n\t@include clearfix;\r\n\r\n\t@if $responsive == true {\r\n\r\n\t\t@include television {\r\n\t\t\twidth: 1140px;\r\n\t\t}\r\n\r\n\t\t@include desktopLarge {\r\n\t\t\twidth: 1140px;\r\n\t\t}\r\n\r\n\t\t@include laptop {\r\n\t\t\twidth: 100%;\r\n\t\t\tpadding: 0 15px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n.flex-container {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n\r\n\t&::before,\r\n\t&::after {\r\n\t\tdisplay: none;\r\n\t}\r\n}\r\n\r\n#app {\r\n\theight: 100%;\r\n}\r\n\r\n.wrapper {\r\n    position: relative;\r\n    min-height: 100%;\r\n    height: auto !important;\r\n    height: 100%;\r\n    overflow: hidden;\r\n\t\tmin-width: if($responsive == true, 100%, $container-width + 30px);\r\n\r\n\t&:after {\r\n\t\tcontent: \"\";\r\n\t\tdisplay: block;\r\n\t\tposition: relative;\r\n\t\theight: $footer-height;\r\n\t}\r\n}\r\n\r\ntable {\r\n\tborder-collapse: collapse;\r\n\tborder-spacing: 0;\r\n}\r\n\r\nul {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\r\n\tli {\r\n\t\tpadding: 0;\r\n\t\tmargin: 0;\r\n\t\tlist-style: none outside none;\r\n\t}\r\n}\r\n\r\np {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n}\r\n\r\nimg {\r\n\tmax-width: 100%;\r\n\tmin-height: 100%;\r\n}\r\n\r\nfooter {\r\n\tposition: relative;\r\n\tmin-width: if($responsive == true, 100%, $container-width + 30);\r\n\theight: $footer-height;\r\n\tmargin-top: -$footer-height;\r\n\t//position: absolute;\r\n\t//bottom: 0;\r\n\t//left: 0;\r\n\t//right: 0;\r\n}\r\n\r\nfigure {\r\n\tmargin: 0;\r\n}\r\n\r\n* {\r\n\tbox-sizing: border-box;\r\n}\r\n",".header {\r\n\r\n    &__top {\r\n        @include clearfix;\r\n        border-bottom: 1px solid #ededed;\r\n\r\n        &-left {\r\n            float: left;\r\n        }\r\n\r\n        &-right {\r\n            float: right;\r\n            display: flex;\r\n            flex-direction: row;\r\n        }\r\n    }\r\n\r\n    &__bottom {\r\n        padding: 25px 0;\r\n        border-bottom: 1px solid #ededed;\r\n        display: flex;\r\n        flex-direction: row;\r\n    }\r\n}\r\n\r\n.user {\r\n    display: flex;\r\n    flex-direction: row;\r\n\r\n    &__bag {\r\n        width: 50px;\r\n        height: 50px;\r\n        text-align: center;\r\n        border: 2px solid $blue;\r\n        border-radius: 50%;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            background: $blue;\r\n        }\r\n\r\n        &:hover &-count::after {\r\n            color: #fff;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: 'your bag';\r\n            font: 700 12px/12px $ffL;\r\n            text-transform: uppercase;\r\n            position: absolute;\r\n            top: 18px;\r\n            left: -80px;\r\n            cursor: pointer;\r\n        }\r\n\r\n        &-count {\r\n            display: block;\r\n            width: 100%;\r\n            height: 100%;\r\n            text-decoration: none;\r\n            position: relative;\r\n\r\n            &::after {\r\n                display: block;\r\n                content: attr(data-count);\r\n                width: 10px;\r\n                height: 10px;\r\n                margin: auto;\r\n                position: absolute;\r\n                top: 0;\r\n                right: 0;\r\n                bottom: 0;\r\n                left: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    &__search {\r\n        width: 50px;\r\n        height: 50px;\r\n        margin-right: -15px;\r\n\r\n        &-link {\r\n            display: block;\r\n            width: 100%;\r\n            height: 100%;\r\n            background: url(img/search.png) no-repeat center center;\r\n        }\r\n    }\r\n}\r\n",".logo {\r\n\r\n    &__img-wrap {\r\n        max-width: 100px;\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n}\r\n",".menu {\r\n\r\n    &__list {\r\n        padding: 15px 0;\r\n        display: flex;\r\n        flex-direction: row;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 35px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n}\r\n",".nav {\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: center;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 55px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n        position: relative;\r\n\r\n        &_color {\r\n            color: $red;\r\n        }\r\n\r\n        &:hover {\r\n            color: $black;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: '';\r\n            width: 0;\r\n            height: 2px;\r\n            background: $blue;\r\n            position: absolute;\r\n            bottom: -5px;\r\n            left: 0;\r\n            transition: width .3s;\r\n        }\r\n\r\n        &:hover.nav__link::after {\r\n            width: 100%;\r\n        }\r\n\r\n        &.active {\r\n            color: $black;\r\n\r\n            &::after {\r\n                width: 100%;\r\n            }\r\n        }\r\n    }\r\n}\r\n",".tabs {\r\n    margin-bottom: 50px;\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: center;\r\n    }\r\n\r\n    &__item {\r\n        margin-left: 55px;\r\n\r\n        &:first-child {\r\n            margin-left: 0;\r\n        }\r\n\r\n        &.active .tabs__link {\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n        font-weight: 700;\r\n        color: inherit;\r\n        text-transform: uppercase;\r\n        text-decoration: none;\r\n        position: relative;\r\n\r\n        &_color {\r\n            color: $red;\r\n        }\r\n\r\n        &:hover {\r\n            color: $blue;\r\n        }\r\n\r\n        &::after {\r\n            display: block;\r\n            content: '';\r\n            width: 0;\r\n            height: 2px;\r\n            background: $blue;\r\n            position: absolute;\r\n            bottom: -5px;\r\n            left: 0;\r\n            transition: width .3s;\r\n        }\r\n\r\n        &:hover.nav__link::after {\r\n            width: 100%;\r\n        }\r\n\r\n        &.active {\r\n            color: $black;\r\n\r\n            &::after {\r\n                width: 100%;\r\n            }\r\n        }\r\n    }\r\n}\r\n",".currency {\r\n\r\n    &__current-wrap {\r\n        margin-right: 12px;\r\n        padding: 15px 20px;\r\n    }\r\n\r\n    &__current {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        text-transform: uppercase;\r\n        cursor: pointer;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n\r\n        &::after {\r\n            display: inline-block;\r\n            content: '';\r\n            width: 10px;\r\n            height: 10px;\r\n            background: url(./img/arrow.png) no-repeat center center;\r\n            position: absolute;\r\n            top: 2px;\r\n            right: -15px;\r\n            transition: .3s;\r\n        }\r\n\r\n        &:hover.currency__current::after {\r\n            transform: rotate(180deg);\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        @extend .currency__current;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n\r\n    &__list {\r\n        display: none;\r\n    }\r\n}\r\n",".languages {\r\n\r\n    &__current-wrap {\r\n        padding: 15px 20px 15px 20px;\r\n        border-left: 1px solid #ededed;\r\n    }\r\n\r\n    &__current {\r\n        font-size: 11px;\r\n        font-weight: 700;\r\n        text-transform: uppercase;\r\n        cursor: pointer;\r\n        position: relative;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n\r\n        &::after {\r\n            display: inline-block;\r\n            content: '';\r\n            width: 10px;\r\n            height: 10px;\r\n            background: url(./img/arrow.png) no-repeat center center;\r\n            position: absolute;\r\n            top: 2px;\r\n            right: -15px;\r\n            transition: .3s;\r\n        }\r\n\r\n        &:hover.languages__current::after {\r\n            transform: rotate(180deg);\r\n        }\r\n    }\r\n\r\n    &__link {\r\n        @extend .languages__current;\r\n\r\n        &:hover {\r\n            color: darken( $grey, 10% );\r\n        }\r\n    }\r\n\r\n    &__list {\r\n        display: none;\r\n    }\r\n}\r\n",".form {\r\n\r\n    &-wrap {\r\n        width: 300px;\r\n        display: inline-block;\r\n    }\r\n\r\n    &__input {\r\n        width: 100%;\r\n        padding: 15px 20px;\r\n        font: 700 12px/12px $ffL;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n        background: transparent;\r\n        border: 2px solid fade-out(#fff, .5);\r\n        border-radius: 50px;\r\n        outline: none;\r\n        @include placecolor(lighten(#fff, 40%));\r\n    }\r\n}\r\n",".footer {\r\n    padding-top: 30px;\r\n\r\n    &__nav-link_mods {\r\n        color: $black;\r\n\r\n        &:hover {\r\n            color: lighten( $black, 30% );\r\n        }\r\n\r\n        &::after {\r\n            display: none;\r\n        }\r\n    }\r\n}\r\n",".catalog {\r\n\r\n    &__products {\r\n        margin-bottom: 60px;\r\n    }\r\n\r\n    &__list {\r\n        display: flex;\r\n        flex-direction: row;\r\n        justify-content: space-between;\r\n        flex-wrap: wrap;\r\n    }\r\n\r\n    &__item {\r\n    \tmargin-bottom: 36px;\r\n    \tposition: relative;\r\n\r\n    \t&:hover .catalog__img {\r\n    \t\ttransform: scale(1.03);\r\n    \t\tbox-shadow: 6px 8px 8px 0px rgba(0, 0, 0, 0.25);\r\n    \t}\r\n\r\n    \t&_new:after {\r\n    \t\tdisplay: block;\r\n    \t\tcontent: \"\";\r\n    \t\twidth: 52px;\r\n    \t\theight: 27px;\r\n    \t\tbackground: url(img/new.png) no-repeat top left;\r\n    \t\tposition: absolute;\r\n    \t\ttop: 23px;\r\n    \t\tleft: 30px;\r\n    \t}\r\n    }\r\n\r\n    &__link {\r\n        display: block;\r\n        width: 100%;\r\n        height: 100%;\r\n    \ttext-decoration: none;\r\n    }\r\n\r\n    &__img {\r\n    \ttransition: all .3s;\r\n    }\r\n\r\n/*********** DISCRIPTIONS ************/\r\n\r\n    &__discription {\r\n    \tpadding-top: 20px;\r\n        text-align: center;\r\n\r\n    \t&-text {\r\n    \t\tmargin-bottom: 10px;\r\n    \t\tfont: 400 16px/16px $ffP;\r\n    \t\tcolor: #333;\r\n    \t\tdisplay: block;\r\n    \t}\r\n\r\n    \t&-price {\r\n    \t\tcolor: rgba(51, 51, 51, 0.5);\r\n    \t\tfont-size: 16px;\r\n    \t\tfont-weight: 400;\r\n    \t\tline-height: 20px;\r\n\r\n    \t\t&:before {\r\n    \t\t\tdisplay: inline-block;\r\n    \t\t\tcontent: attr(data-actual-price);\r\n    \t\t\tmargin-right: 10px;\r\n    \t\t\tcolor: rgba(51, 51, 51, 0.5);\r\n    \t\t\ttext-decoration: line-through;\r\n    \t\t}\r\n    \t}\r\n\r\n        .sale-price {\r\n            color: #fc411d;\r\n        }\r\n    }\r\n\r\n/*********** LOAD LINK ************/\r\n\r\n    &__load {\r\n        text-align: center;\r\n\r\n        &-link {\r\n        \tcolor: rgba(51, 51, 51, 0.5);\r\n        \tfont-size: 13px;\r\n        \tfont-weight: 700;\r\n        \ttext-transform: uppercase;\r\n        \ttext-decoration: none;\r\n        \tposition: relative;\r\n\r\n        \t&:hover.catalog__load-link:after {\r\n        \t\twidth: 100%;\r\n        \t}\r\n\r\n        \t&:after {\r\n        \t\tdisplay: block;\r\n        \t\tcontent: \"\";\r\n        \t\twidth: 0;\r\n        \t\theight: 1px;\r\n        \t\tbackground: rgba(51, 51, 51, 0.5);\r\n        \t\ttransition: all .3s;\r\n        \t\tposition: absolute;\r\n        \t\tbottom: -2px;\r\n        \t\tleft: 0;\r\n        \t}\r\n        }\r\n    }\r\n}\r\n",".subscribe {\r\n    padding: 70px 0;\r\n    text-align: center;\r\n    background: url(img/subscribe_bg.jpg) no-repeat top left;\r\n    background-size: cover;\r\n}\r\n\r\n.title-wrap {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.title {\r\n    margin-bottom: 25px;\r\n    font: 700 12px/12px $ffL;\r\n    color: #333;\r\n    text-transform: uppercase;\r\n    display: block;\r\n    opacity: 0.6;\r\n}\r\n\r\n.subtitle {\r\n    font: 400 38px/38px $ffP;\r\n    color: white;\r\n}\r\n"],"sourceRoot":"webpack://"}]);
 
 	// exports
 
 
 /***/ },
-/* 736 */
+/* 745 */
 /***/ function(module, exports) {
 
 	/*
@@ -54220,31 +54750,31 @@
 
 
 /***/ },
-/* 737 */
+/* 746 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/search.png";
 
 /***/ },
-/* 738 */
+/* 747 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/arrow.png";
 
 /***/ },
-/* 739 */
+/* 748 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/new.png";
 
 /***/ },
-/* 740 */
+/* 749 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/subscribe_bg.jpg";
 
 /***/ },
-/* 741 */
+/* 750 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -54494,536 +55024,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 742 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.HomeRoutes = exports.HomePage = undefined;
-
-	var _home = __webpack_require__(743);
-
-	var _home2 = _interopRequireDefault(_home);
-
-	var _routes = __webpack_require__(744);
-
-	var _routes2 = _interopRequireDefault(_routes);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.HomePage = _home2.default;
-	exports.HomeRoutes = _routes2.default;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 743 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var HomePage = function (_React$Component) {
-	    _inherits(HomePage, _React$Component);
-
-	    function HomePage() {
-	        _classCallCheck(this, HomePage);
-
-	        return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
-	    }
-
-	    _createClass(HomePage, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'home' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'heading-wrap' },
-	                        _react2.default.createElement(
-	                            'h1',
-	                            { className: 'heading' },
-	                            'Hello this is Home page'
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return HomePage;
-	}(_react2.default.Component);
-
-	HomePage.path = '/home';
-	exports.default = HomePage;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 744 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(265);
-
-	var _home = __webpack_require__(743);
-
-	var _home2 = _interopRequireDefault(_home);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createElement(
-	    _reactRouter.Route,
-	    null,
-	    _react2.default.createElement(_reactRouter.Route, { component: _home2.default, path: _home2.default.path })
-	);
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 745 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.CatalogRoutes = exports.Catalog = undefined;
-
-	var _catalog = __webpack_require__(746);
-
-	var _catalog2 = _interopRequireDefault(_catalog);
-
-	var _routes = __webpack_require__(749);
-
-	var _routes2 = _interopRequireDefault(_routes);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.Catalog = _catalog2.default;
-	exports.CatalogRoutes = _routes2.default;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 746 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _products = __webpack_require__(747);
-
-	var _products2 = _interopRequireDefault(_products);
-
-	var _subscribe = __webpack_require__(748);
-
-	var _subscribe2 = _interopRequireDefault(_subscribe);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Catalog = function (_React$Component) {
-	    _inherits(Catalog, _React$Component);
-
-	    function Catalog() {
-	        _classCallCheck(this, Catalog);
-
-	        return _possibleConstructorReturn(this, (Catalog.__proto__ || Object.getPrototypeOf(Catalog)).apply(this, arguments));
-	    }
-
-	    _createClass(Catalog, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'catalog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2.default.createElement(_products2.default, null),
-	                    _react2.default.createElement(_subscribe2.default, null)
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Catalog;
-	}(_react2.default.Component);
-
-	Catalog.path = '/catalog';
-	exports.default = Catalog;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "catalog.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 747 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _index = __webpack_require__(367);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PRODUCTITEMS = [{ img: 'img/products_1.jpg', species: 'shorts', disc: 'Printed swimsuit', price: '$23', sale: '', new: '' }, { img: 'img/products_2.jpg', species: 'shorts', disc: 'Jogging bermuda shorts', price: '$12', sale: '$36', new: 'new' }, { img: 'img/products_3.jpg', species: 'accessoires', disc: 'Basic beach flip flops', price: '$9', sale: '', new: '' }, { img: 'img/products_4.jpg', species: 'accessoires', disc: 'Black sunglasses', price: '$29', sale: '', new: '' }, { img: 'img/products_5.jpg', species: 'shirts', disc: 'Long sleeved twill shirt', price: '$20', sale: '', new: '' }, { img: 'img/products_6.jpg', species: 'shorts', disc: 'Basic swimsuit', price: '$36', sale: '', new: '' }, { img: 'img/products_7.jpg', species: 'shorts', disc: 'Bleached shorts', price: '$12', sale: '', new: '' }, { img: 'img/products_8.jpg', species: 't-shirts', disc: 'T-shirt with lower panel', price: '$12', sale: '$32', new: '' }];
-
-	var Products = function (_React$Component) {
-	    _inherits(Products, _React$Component);
-
-	    function Products(props) {
-	        _classCallCheck(this, Products);
-
-	        var _this = _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).call(this, props));
-
-	        _this.state = {
-	            stateArray: PRODUCTITEMS
-	        };
-	        return _this;
-	    }
-
-	    _createClass(Products, [{
-	        key: 'renderItems',
-	        value: function renderItems(item, index) {
-	            var salePrice = item.sale !== '' ? 'sale-price' : '';
-	            var newProduct = item.new !== '' ? 'catalog__item_new' : '';
-	            return _react2.default.createElement(
-	                'li',
-	                { className: ['catalog__item', newProduct].join(' '), key: index },
-	                _react2.default.createElement(
-	                    'figure',
-	                    { className: 'catalog__img-wrap' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { className: 'catalog__link', href: '#' },
-	                        _react2.default.createElement('img', { className: 'catalog__img', src: item.img })
-	                    ),
-	                    _react2.default.createElement(
-	                        'figcaption',
-	                        { className: 'catalog__discription' },
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: 'catalog__discription-text' },
-	                            item.disc
-	                        ),
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: ['catalog__discription-price', salePrice].join(' '), 'data-actual-price': item.sale },
-	                            item.price
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'section',
-	                { className: 'catalog__products' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'heading-wrap' },
-	                    _react2.default.createElement(
-	                        'h1',
-	                        { className: 'heading' },
-	                        'Catalog'
-	                    )
-	                ),
-	                _react2.default.createElement(_index.Filter, null),
-	                _react2.default.createElement(
-	                    'ul',
-	                    { className: 'catalog__list' },
-	                    this.state.stateArray.map(this.renderItems.bind(this))
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'catalog__load' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { className: 'catalog__load-link', href: '#' },
-	                        'Load more...'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Products;
-	}(_react2.default.Component);
-
-	exports.default = Products;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "_products.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 748 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _index = __webpack_require__(367);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Subscribe = function (_React$Component) {
-	    _inherits(Subscribe, _React$Component);
-
-	    function Subscribe() {
-	        _classCallCheck(this, Subscribe);
-
-	        return _possibleConstructorReturn(this, (Subscribe.__proto__ || Object.getPrototypeOf(Subscribe)).apply(this, arguments));
-	    }
-
-	    _createClass(Subscribe, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'subscribe' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title-wrap' },
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: 'title' },
-	                            'subscribe'
-	                        ),
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: 'subtitle' },
-	                            'Stay updated on new'
-	                        )
-	                    ),
-	                    _react2.default.createElement(_index.Form, null)
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Subscribe;
-	}(_react2.default.Component);
-
-	exports.default = Subscribe;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "_subscribe.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 749 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(265);
-
-	var _catalog = __webpack_require__(746);
-
-	var _catalog2 = _interopRequireDefault(_catalog);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createElement(
-	    _reactRouter.Route,
-	    null,
-	    _react2.default.createElement(_reactRouter.Route, { component: _catalog2.default, path: _catalog2.default.path })
-	);
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 750 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(265);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ErrorPage = function (_React$Component) {
-	    _inherits(ErrorPage, _React$Component);
-
-	    function ErrorPage() {
-	        _classCallCheck(this, ErrorPage);
-
-	        return _possibleConstructorReturn(this, (ErrorPage.__proto__ || Object.getPrototypeOf(ErrorPage)).apply(this, arguments));
-	    }
-
-	    _createClass(ErrorPage, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'error' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'heading-wrap' },
-	                        _react2.default.createElement(
-	                            'h1',
-	                            { className: 'heading' },
-	                            'The page does\'t exist'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            '\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 ',
-	                            _react2.default.createElement(
-	                                _reactRouter.Link,
-	                                { to: '/' },
-	                                '\u0433\u043B\u0430\u0432\u043D\u0443\u044E'
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return ErrorPage;
-	}(_react2.default.Component);
-
-	exports.default = ErrorPage;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(362); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }
 /******/ ]);
