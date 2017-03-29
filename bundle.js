@@ -38412,7 +38412,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var NAVITEMS = [{ name: 'Home', link: '/home' }, { name: 'Catalog', link: '/catalog' }, { name: 'News', link: '/news' }, { name: 'Sale', link: '/sale' }, { name: 'About', link: '/about' }, { name: 'Contact', link: '/contact' }];
+	var NAVITEMS = [{ name: 'Home', link: '/home' }, { name: 'Catalog', link: '/catalog/' }, { name: 'News', link: '/news' }, { name: 'Sale', link: '/sale' }, { name: 'About', link: '/about' }, { name: 'Contact', link: '/contact' }];
 
 	var Navigation = function (_React$Component) {
 	    _inherits(Navigation, _React$Component);
